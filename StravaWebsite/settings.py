@@ -37,6 +37,9 @@ DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
 ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",") # default is localhost
 # eventually set allowed hosts lists in the .env file with my url?
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') #This tells Django to collect static files into a folder called 'staticfiles' at the root of your project.
+STATIC_URL = '/static/'
+
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'home'
 
